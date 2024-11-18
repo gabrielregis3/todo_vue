@@ -1,7 +1,7 @@
 :root {
 	--primary: #EA40A4;
-	--work: #3A82EE;
-	--personal: var(--primary);
+	--work: #ee3a3a;
+	--personal: #213fe9;
 	--prod: rgba(255, 190, 69, 0.822);
 	--other: #000;
 	--light: #EEE;
@@ -11,8 +11,8 @@
 
 	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
-	--work-glow: 0px 0px 4px rgba(58, 130, 238, 0.75);
-	--personal-glow: 0px 0px 4px rgba(234, 64, 164, 0.75);
+	--work-glow: 0px 0px 4px rgba(223, 66, 46, 0.75);
+	--personal-glow: 0px 0px 4px rgba(32, 35, 207, 0.75);
 	--prod-glow: 0px 0px 4px rgba(255, 190, 69, 0.822);
 	--other-glow: 0px 0px 4px rgba(0, 0, 0, 0.75);
 }
