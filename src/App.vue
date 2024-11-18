@@ -94,8 +94,8 @@
             </label>
 
             <label>
-              <input type="radio" name="category" value="prod" v-model="input_category"/>
-              <span class="bubble prod"></span>
+              <input type="radio" name="category" value="productivity" v-model="input_category"/>
+              <span class="bubble productivity"></span>
               <div>
                 Productivity
               </div>
@@ -127,7 +127,7 @@
               </label>
 
               <div class="todo-content">
-                  <input type="text" v-model="todo.content"/>
+                  <input type="text" v-model="todo.content"/><i>{{todo.category}}</i>
               </div>
 
               <div class="actions">

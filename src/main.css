@@ -2,18 +2,14 @@
 	--primary: #EA40A4;
 	--work: #ee3a3a;
 	--personal: #213fe9;
-	--prod: rgba(255, 190, 69, 0.822);
+	--productivity: rgba(255, 190, 69, 0.822);
 	--other: #000;
 	--light: #EEE;
 	--grey: #888;
-	--dark: #313154;
-	--danger: #ff5b57;
-
-	--shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 
 	--work-glow: 0px 0px 4px rgba(223, 66, 46, 0.75);
 	--personal-glow: 0px 0px 4px rgba(32, 35, 207, 0.75);
-	--prod-glow: 0px 0px 4px rgba(255, 190, 69, 0.822);
+	--productivity-glow: 0px 0px 4px rgba(255, 190, 69, 0.822);
 	--other-glow: 0px 0px 4px rgba(0, 0, 0, 0.75);
 }
 
@@ -34,7 +30,6 @@ input:not([type="radio"]):not([type="checkbox"]), button {
 
 body {
 	background: var(--light);
-	color: var(--dark);
 }
 
 section {
@@ -45,7 +40,6 @@ section {
 }
 
 h3 {
-	color: var(--dark);
 	font-size: 1rem;
 	font-weight: 400;
 	margin-bottom: 0.5rem;
@@ -70,7 +64,6 @@ h4 {
 
 .greeting .title,
 .greeting .title input {
-	color: var(--dark);
 	font-size: 1.5rem;
 	font-weight: 700;
 }
@@ -80,10 +73,8 @@ h4 {
 	width: 100%;
 	font-size: 1.125rem;
 	padding: 1rem 1.5rem;
-	color: var(--dark);
 	background-color: #FFF;
 	border-radius: 0.5rem;
-	box-shadow: var(--shadow);
 	margin-bottom: 1.5rem;
 }
 
@@ -102,7 +93,6 @@ h4 {
 	padding: 1.5rem;
 	background-color: #FFF;
 	border-radius: 0.5rem;
-	box-shadow: var(--shadow);
 	cursor: pointer;
 }
 
@@ -137,14 +127,14 @@ input[type="checkbox"] {
 	box-shadow: var(--other-glow);
 }
 
-.bubble.prod {
-	border-color: var(--prod);
-	box-shadow: var(--prod-glow);
+.bubble.productivity {
+	border-color: var(--productivity);
+	box-shadow: var(--productivity-glow);
 }
 
-.bubble.prod::after {
-	background-color: var(--prod);
-	box-shadow: var(--prod-glow);
+.bubble.productivity::after {
+	background-color: var(--productivity);
+	box-shadow: var(--productivity-glow);
 }
 
 .bubble::after {
@@ -171,7 +161,6 @@ input:checked ~ .bubble::after {
 }
 
 .create-todo .options label div {
-	color: var(--dark);
 	font-size: 1.125rem;
 	margin-top: 1rem;
 }
@@ -203,7 +192,6 @@ input:checked ~ .bubble::after {
 	background-color: #FFF;
 	padding: 1rem;
 	border-radius: 0.5rem;
-	box-shadow: var(--shadow);
 	margin-bottom: 1rem;
 }
 
@@ -218,7 +206,6 @@ input:checked ~ .bubble::after {
 }
 
 .todo-item .todo-content input {
-	color: var(--dark);
 	font-size: 1.125rem;
 }
 
@@ -246,7 +233,7 @@ input:checked ~ .bubble::after {
 }
 
 .todo-item .actions .delete {
-	background-color: var(--danger);
+	background-color: var(--work);
 }
 
 .todo-item.done .todo-content input {
