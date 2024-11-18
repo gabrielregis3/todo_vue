@@ -28,21 +28,21 @@
     input_category.value = null
   }
 
+  const removeTodo = todo => {
+    todos.value = todos.value.filter(t => t !== todo)
+  }
+
   const clearAllTasks = () => {
 
   if (!todos) {
     return;
   }
 
-  const userConfirmed = window.confirm("You want to delete all the tasks?");
+  const userConfirmed = window.confirm("You want to delete all the tasks?")
 
   if (userConfirmed) {
-    todos.value = [];
+    todos.value = []
   }
-};
-
-  const removeTodo = todo => {
-    todos.value = todos.value.filter(t => t !== todo)
   }
 
   //watch just do something when the value changes
@@ -78,10 +78,10 @@
 
           <div class="options">
             <label>
-              <input type="radio" name="category" value="business" v-model="input_category"/>
-              <span class="bubble business"></span>
+              <input type="radio" name="category" value="work" v-model="input_category"/>
+              <span class="bubble work"></span>
               <div>
-                Business
+                Work
               </div>
             </label>
 
@@ -90,6 +90,22 @@
               <span class="bubble personal"></span>
               <div>
                 Personal
+              </div>
+            </label>
+
+            <label>
+              <input type="radio" name="category" value="prod" v-model="input_category"/>
+              <span class="bubble prod"></span>
+              <div>
+                Productivity
+              </div>
+            </label>
+
+            <label>
+              <input type="radio" name="category" value="other" v-model="input_category"/>
+              <span class="bubble other"></span>
+              <div>
+                Other
               </div>
             </label>
           </div>
