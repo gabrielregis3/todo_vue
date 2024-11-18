@@ -74,7 +74,7 @@
           <h4>What's on your todo list?</h4>
           <input type="text" placeholder="e.g. read a book" v-model="input_content" />
 
-          <h4>Pick a category</h4>
+          <h4>Pick a category:</h4>
 
           <div class="options">
             <label>
@@ -109,7 +109,7 @@
               </div>
             </label>
           </div>
-
+          <h4>Actions:</h4>
           <input class="buttons" type="submit" value="Add todo"/>
         </form>
 
@@ -120,6 +120,8 @@
 
       <section class="todo-list">
           <div class="list">
+          <h4>Items:</h4>
+
             <div v-for="todo in todos_asc" :class="`todo-item ${todo.done && 'done'}`">
               <label>
                 <input type="checkbox" v-model="todo.done"/>
