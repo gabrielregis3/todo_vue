@@ -28,6 +28,19 @@
     input_category.value = null
   }
 
+  const clearAllTasks = () => {
+
+  if (!todos) {
+    return;
+  }
+
+  const userConfirmed = window.confirm("You want to delete all the tasks?");
+
+  if (userConfirmed) {
+    todos.value = [];
+  }
+};
+
   const removeTodo = todo => {
     todos.value = todos.value.filter(t => t !== todo)
   }
@@ -56,7 +69,6 @@
       </section>
 
       <section class="create-todo">
-        <h3>CREATE A TODO</h3>
 
         <form @submit.prevent="addToDo"> <!--At submit prevent default -->
           <h4>What's on your todo list?</h4>
@@ -82,12 +94,15 @@
             </label>
           </div>
 
-          <input type="submit" value="Add todo"/>
+          <input class="buttons" type="submit" value="Add todo"/>
         </form>
+
+        <form @submit.prevent="clearAllTasks">
+          <input class="buttons clear-all-button" type="submit" value="Clear all tasks"/>
+        </form> 
       </section>
 
       <section class="todo-list">
-          <h3>TODO LIST</h3>
           <div class="list">
             <div v-for="todo in todos_asc" :class="`todo-item ${todo.done && 'done'}`">
               <label>
